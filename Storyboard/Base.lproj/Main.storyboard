@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KbX-7H-bVe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planet SelectorVC-->
+        <scene sceneID="dPk-mx-a4N">
+            <objects>
+                <viewController id="KbX-7H-bVe" customClass="PlanetSelectorVC" customModule="Intergalactic_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hpI-Kr-PcP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T9Q-th-a2a">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlanetCell" rowHeight="200" id="kBl-dg-uON" customClass="PlanetCell" customModule="Intergalactic_Fun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBl-dg-uON" id="bN0-9o-R4U">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-Tq-eNz">
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="192"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VRd-xU-8mK">
+                                                    <rect key="frame" x="40" y="61" width="334" height="78"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="60"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VRd-xU-8mK" secondAttribute="trailing" constant="20" id="0F9-Ei-FAV"/>
+                                                <constraint firstItem="Dmj-Tq-eNz" firstAttribute="top" secondItem="bN0-9o-R4U" secondAttribute="top" id="Ax6-Yo-3qj"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dmj-Tq-eNz" secondAttribute="bottom" constant="8" id="BRY-fO-ORP"/>
+                                                <constraint firstItem="VRd-xU-8mK" firstAttribute="leading" secondItem="bN0-9o-R4U" secondAttribute="leadingMargin" constant="20" id="IM0-0Q-7Lb"/>
+                                                <constraint firstItem="VRd-xU-8mK" firstAttribute="centerY" secondItem="bN0-9o-R4U" secondAttribute="centerY" id="O6i-Zm-OUa"/>
+                                                <constraint firstItem="Dmj-Tq-eNz" firstAttribute="leading" secondItem="bN0-9o-R4U" secondAttribute="leading" constant="8" id="VGe-W5-DHk"/>
+                                                <constraint firstItem="VRd-xU-8mK" firstAttribute="centerX" secondItem="bN0-9o-R4U" secondAttribute="centerX" id="Y0c-ab-tP1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dmj-Tq-eNz" secondAttribute="trailing" constant="8" id="hm5-jH-Y43"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="planetImage" destination="Dmj-Tq-eNz" id="r47-6e-BIX"/>
+                                            <outlet property="planetTitle" destination="VRd-xU-8mK" id="hhh-rp-ecb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T9Q-th-a2a" firstAttribute="top" secondItem="OQF-Jv-Kcm" secondAttribute="top" id="8pG-c3-UFH"/>
+                            <constraint firstAttribute="bottom" secondItem="T9Q-th-a2a" secondAttribute="bottom" id="CQY-zi-2jr"/>
+                            <constraint firstItem="T9Q-th-a2a" firstAttribute="leading" secondItem="OQF-Jv-Kcm" secondAttribute="leading" id="ds7-JG-bR7"/>
+                            <constraint firstItem="OQF-Jv-Kcm" firstAttribute="trailing" secondItem="T9Q-th-a2a" secondAttribute="trailing" id="tvL-kz-Mfu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OQF-Jv-Kcm"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="T9Q-th-a2a" id="oFF-6f-6HR"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="ToPlanet" id="F7m-ac-Iwq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5j-B0-DuF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797.10144927536237" y="101.78571428571428"/>
+        </scene>
+        <!--Planet ViewVC-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="PlanetViewVC" customModule="Intergalactic_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cWo-DM-NJZ"/>
+                    <connections>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="earth" width="2048" height="1024"/>
+    </resources>
+</document>
