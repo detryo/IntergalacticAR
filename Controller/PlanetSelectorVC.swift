@@ -55,7 +55,7 @@ extension PlanetSelectorVC: UITableViewDataSource, UITableViewDelegate {
         
         if let planetVC = segue.destination as? PlanetViewVC {
             
-            planetVC.planet = planetToPass
+            planetVC.planetName = planetToPass
         }
     }
 }
